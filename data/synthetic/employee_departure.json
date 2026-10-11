@@ -1,0 +1,38 @@
+{
+  "id": "demo-employee-departure",
+  "scenario": "employee_departure",
+  "title": "Billing Operations Analyst - role handover",
+  "description": "SYNTHETIC DEMO DATA. Dana Whitfield is leaving the Billing Operations team. Marcus Oyelaran takes over the analyst responsibilities. All names, systems and references are fictional.",
+  "outgoing_owner": "Dana Whitfield",
+  "receiving_owner": "Marcus Oyelaran",
+  "target_date": "2026-11-02",
+  "items": [
+    {"id": "resp-1", "category": "responsibilities", "title": "Monthly invoice reconciliation", "detail": "Reconcile issued invoices against the finance export on the second working day of each month.", "owner": "Marcus Oyelaran", "evidence": "Runbook: billing-ops/reconciliation.md"},
+    {"id": "resp-2", "category": "responsibilities", "title": "Vendor payment run preparation", "detail": "Prepare the weekly payment batch and send it for approval.", "owner": ""},
+    {"id": "resp-3", "category": "responsibilities", "title": "Weekly operations KPI report", "detail": "Compile and send the KPI summary every Friday.", "owner": "Dana Whitfield", "evidence": "Template: kpi-weekly.xlsx"},
+
+    {"id": "work-1", "category": "active_work", "title": "Migration of invoice templates to layout v2", "detail": "12 of 20 templates migrated; remaining 8 are listed in the ticket.", "owner": "Marcus Oyelaran", "due_date": "2026-11-20", "evidence": "Ticket OPS-214"},
+    {"id": "work-2", "category": "active_work", "title": "Q4 vendor contract renewal checklist", "detail": "Checklist started for three vendors.", "owner": "TBD"},
+
+    {"id": "dec-1", "category": "decisions", "title": "Keep the legacy export format until January", "detail": "Finance asked to avoid format changes during year-end close.", "evidence": "Decision log entry 2026-09-14"},
+
+    {"id": "doc-1", "category": "documentation", "title": "Reconciliation runbook", "detail": "Step-by-step procedure including known mismatch causes.", "evidence": "billing-ops/reconciliation.md"},
+    {"id": "doc-2", "category": "documentation", "title": "Payment run procedure", "detail": "TBD"},
+
+    {"id": "dep-1", "category": "dependencies", "title": "Nightly finance data export", "detail": "Reconciliation needs the export to finish before 07:00."},
+    {"id": "dep-2", "category": "dependencies", "title": "Shared mailbox billing-ops", "detail": "Vendor queries arrive here.", "owner": "IT Service Desk"},
+
+    {"id": "dl-1", "category": "deadlines", "title": "Month-end close submission", "due_date": "2026-11-05", "owner": ""},
+    {"id": "dl-2", "category": "deadlines", "title": "Vendor contract renewal notice", "due_date": "", "owner": "Marcus Oyelaran"},
+
+    {"id": "risk-1", "category": "risks_blockers", "title": "Payment tool approval role not yet granted to the receiver", "detail": "Without the role the payment run cannot be prepared.", "critical": true},
+    {"id": "risk-2", "category": "risks_blockers", "title": "Template migration may delay November invoices", "detail": "Mitigation: keep v1 templates active until all 20 are migrated.", "owner": "Marcus Oyelaran"},
+
+    {"id": "con-1", "category": "contacts", "title": "Priya Raman - Finance Team Lead", "detail": "Approves payment runs and month-end submissions."},
+
+    {"id": "acc-1", "category": "access", "title": "Billing system - Analyst role", "detail": ""},
+
+    {"id": "q-1", "category": "open_questions", "title": "Who approves payment runs above the standard limit?", "detail": "Not documented anywhere."}
+  ],
+  "not_applicable": {}
+}

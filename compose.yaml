@@ -1,0 +1,17 @@
+services:
+  contextrelay:
+    build: .
+    image: contextrelay-ai:local
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      CONTEXTRELAY_LLM_ENABLED: ${CONTEXTRELAY_LLM_ENABLED:-false}
+      CONTEXTRELAY_LLM_MODEL: ${CONTEXTRELAY_LLM_MODEL:-claude-opus-5-5}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      CONTEXTRELAY_LOG_LEVEL: ${CONTEXTRELAY_LOG_LEVEL:-INFO}
+    volumes:
+      - contextrelay-data:/data
+    restart: unless-stopped
+
+volumes:
+  contextrelay-data:

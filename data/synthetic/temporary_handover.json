@@ -1,0 +1,25 @@
+{
+  "id": "demo-temporary-handover",
+  "scenario": "temporary_handover",
+  "title": "Support queue lead - two-week absence cover",
+  "description": "SYNTHETIC DEMO DATA. Aisha Bello is away for two weeks. Jonas Lindqvist covers the customer support queue lead duties. All names, systems and references are fictional.",
+  "outgoing_owner": "Aisha Bello",
+  "receiving_owner": "Jonas Lindqvist",
+  "target_date": "2026-10-19",
+  "items": [
+    {"id": "work-1", "category": "active_work", "title": "Refund approval for ticket batch 44", "detail": "Seven refunds wait for lead approval.", "owner": "Jonas Lindqvist", "due_date": "2026-10-21"},
+    {"id": "work-2", "category": "active_work", "title": "Pending approval: overtime request for the weekend shift", "detail": "Submitted to the operations manager, no answer yet.", "owner": "Aisha Bello"},
+
+    {"id": "resp-1", "category": "responsibilities", "title": "Daily queue triage at 09:00", "detail": "Assign new tickets and flag anything older than 24 hours.", "owner": "Jonas Lindqvist", "evidence": "Support handbook section 3"},
+    {"id": "resp-2", "category": "responsibilities", "title": "Weekly service level report", "detail": "Send every Monday.", "owner": "Jonas Lindqvist"},
+
+    {"id": "dl-1", "category": "deadlines", "title": "Response to the escalated complaint from a key account", "due_date": "2026-10-20", "owner": ""},
+    {"id": "dl-2", "category": "deadlines", "title": "Monthly service level report to management", "due_date": "30/10/2026", "owner": "Jonas Lindqvist"},
+
+    {"id": "risk-1", "category": "risks_blockers", "title": "Refund tool rejects approvals from deputy accounts", "detail": "Known since last week; no workaround documented.", "critical": true},
+    {"id": "risk-2", "category": "risks_blockers", "title": "Two agents on leave in the second week", "detail": ""},
+
+    {"id": "con-1", "category": "contacts", "title": "Ravi Menon - Operations Manager", "detail": "Line manager of the support team."}
+  ],
+  "not_applicable": {}
+}

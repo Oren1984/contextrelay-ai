@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "weights": {
+    "knowledge_completeness": 30,
+    "ownership_clarity": 20,
+    "dependency_exposure": 10,
+    "deadline_sensitivity": 15,
+    "unresolved_blockers": 15,
+    "critical_information": 10
+  },
+  "thresholds": {
+    "ready_for_review": 80,
+    "needs_clarification": 50
+  },
+  "status_credit": {
+    "verified": 1.0,
+    "present_unverified": 0.7,
+    "missing": 0.0
+  },
+  "blocker_penalty": {
+    "critical": 50,
+    "unmanaged_risk": 15
+  },
+  "unknown_dependency_score": 50,
+  "urgent_window_days": 14,
+  "placeholder_values": ["tbd", "tbc", "todo", "n/a", "na", "?", "??", "???", "-", "unknown", "none", "pending", "xxx"],
+  "scenarios": {
+    "employee_departure": {
+      "label": "Employee Departure",
+      "required": {
+        "responsibilities": "critical",
+        "active_work": "high",
+        "documentation": "high",
+        "deadlines": "high",
+        "contacts": "high"
+      },
+      "escalation_contact_required": true,
+      "escalation_severity": "high",
+      "critical_information": ["contacts", "access", "documentation"],
+      "category_labels": {}
+    },
+    "freelancer_completion": {
+      "label": "Freelancer Project Completion",
+      "required": {
+        "active_work": "critical",
+        "responsibilities": "high",
+        "risks_blockers": "high",
+        "documentation": "high"
+      },
+      "escalation_contact_required": false,
+      "escalation_severity": "medium",
+      "critical_information": ["documentation", "access"],
+      "category_labels": {
+        "active_work": "Deliverables and outstanding work",
+        "responsibilities": "Ongoing responsibilities and support boundaries",
+        "risks_blockers": "Known limitations and risks",
+        "documentation": "Relevant files and documentation"
+      }
+    },
+    "temporary_handover": {
+      "label": "Temporary Team Handover",
+      "required": {
+        "active_work": "critical",
+        "deadlines": "critical",
+        "contacts": "critical",
+        "risks_blockers": "high",
+        "responsibilities": "medium"
+      },
+      "escalation_contact_required": true,
+      "escalation_severity": "critical",
+      "critical_information": ["contacts", "access"],
+      "category_labels": {
+        "active_work": "Pending activities and approvals",
+        "responsibilities": "Recurring operational tasks",
+        "risks_blockers": "Known blockers",
+        "contacts": "Escalation contacts"
+      }
+    }
+  },
+  "classification_keywords": {
+    "deadlines": ["deadline", "due ", "due:", "by end of", "expires"],
+    "risks_blockers": ["blocker", "blocked", "risk", "limitation", "issue"],
+    "access": ["access", "login", "permission", "credential", "vpn", "license"],
+    "contacts": ["contact", "escalat", "reach out", "phone", "email"],
+    "dependencies": ["depends on", "dependency", "upstream", "downstream", "vendor"],
+    "decisions": ["decided", "decision", "agreed", "approved to"],
+    "documentation": ["document", "runbook", "wiki", "readme", "file", "folder", "guide"],
+    "open_questions": ["?", "unclear", "question", "to confirm"],
+    "active_work": ["in progress", "ongoing", "pending", "working on", "wip", "delivered", "completed"],
+    "responsibilities": ["responsible", "owns", "weekly", "monthly", "daily", "recurring"]
+  }
+}

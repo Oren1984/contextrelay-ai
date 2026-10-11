@@ -1,0 +1,36 @@
+{
+  "id": "demo-freelancer-completion",
+  "scenario": "freelancer_completion",
+  "title": "Analytics dashboard engagement - closeout",
+  "description": "SYNTHETIC DEMO DATA. Freelance developer Lena Fischer has finished building a web analytics dashboard for Brightleaf Studio and hands ongoing responsibility to the client's in-house lead. All names, systems and references are fictional.",
+  "outgoing_owner": "Lena Fischer",
+  "receiving_owner": "Tomas Rivera",
+  "target_date": "2026-10-30",
+  "items": [
+    {"id": "work-1", "category": "active_work", "title": "Dashboard v1.0 with five agreed reports", "detail": "Delivered and signed off by the client.", "state": "completed", "evidence": "Sign-off email 2026-10-21"},
+    {"id": "work-2", "category": "active_work", "title": "Data import job for the web shop", "detail": "Delivered; runs nightly.", "state": "completed", "evidence": "Repository tag v1.0.0"},
+    {"id": "work-3", "category": "active_work", "title": "Admin user guide", "detail": "Delivered as PDF.", "state": "completed", "evidence": "docs/admin-guide.pdf"},
+    {"id": "work-4", "category": "active_work", "title": "Mobile layout fixes for the revenue report", "detail": "Two layout issues remain on small screens; not part of the signed-off scope.", "state": "open", "owner": ""},
+
+    {"id": "resp-1", "category": "responsibilities", "title": "Monitoring the nightly import job", "detail": "Check the job log each morning; rerun manually on failure.", "owner": "Tomas Rivera", "evidence": "docs/operations.md"},
+    {"id": "resp-2", "category": "responsibilities", "title": "Post-delivery support by the freelancer", "detail": "Bug fixes for delivered scope until 2026-11-30, by email, two working days response. New features are out of scope.", "owner": "Tomas Rivera", "evidence": "Contract section 6"},
+
+    {"id": "risk-1", "category": "risks_blockers", "title": "Export limited to 10,000 rows per report", "detail": "Known limitation of the charting component; larger exports must be split by date range.", "owner": "Tomas Rivera", "evidence": "docs/limitations.md"},
+    {"id": "risk-2", "category": "risks_blockers", "title": "Import fails when the shop API changes its schema", "detail": "The job stops and logs an error; mapping must be updated manually.", "owner": "Tomas Rivera", "evidence": "docs/limitations.md"},
+
+    {"id": "doc-1", "category": "documentation", "title": "Source repository and deployment notes", "detail": "Repository 'brightleaf-dashboard', README covers local setup and deployment.", "evidence": "Repository README"},
+    {"id": "doc-2", "category": "documentation", "title": "Operations guide", "detail": "Daily checks, rerun procedure, backup location.", "evidence": "docs/operations.md"},
+
+    {"id": "dec-1", "category": "decisions", "title": "Nightly batch import instead of real-time sync", "detail": "Chosen to stay within the shop API rate limits.", "evidence": "Meeting notes 2026-08-12"},
+    {"id": "dec-2", "category": "decisions", "title": "No customer-level data stored in the dashboard", "detail": "Only aggregated figures are imported.", "evidence": "Meeting notes 2026-08-12"},
+
+    {"id": "dep-1", "category": "dependencies", "title": "Web shop reporting API", "detail": "Source of all imported figures.", "owner": "Brightleaf web shop provider"},
+
+    {"id": "acc-1", "category": "access", "title": "Hosting account - admin role", "detail": "Transfer of the admin role is requested through the hosting provider's ownership-transfer form.", "owner": "Tomas Rivera"},
+
+    {"id": "q-1", "category": "open_questions", "title": "Who renews the charting component license in March?", "detail": "The license is currently registered to the freelancer."}
+  ],
+  "not_applicable": {
+    "deadlines": "No dated commitments remain after delivery; support ends with the contract."
+  }
+}

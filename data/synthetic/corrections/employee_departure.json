@@ -1,0 +1,14 @@
+{
+  "description": "SYNTHETIC sample corrections for the Employee Departure demo. Applying them and re-running the analysis reproduces the documented Before/After result. One question (q-1) and one placeholder (doc-2) are intentionally left open.",
+  "operations": [
+    {"op": "set_item", "item_id": "resp-2", "fields": {"owner": "Marcus Oyelaran"}},
+    {"op": "set_item", "item_id": "resp-3", "fields": {"owner": "Marcus Oyelaran"}},
+    {"op": "set_item", "item_id": "work-2", "fields": {"owner": "Marcus Oyelaran"}},
+    {"op": "set_item", "item_id": "dep-1", "fields": {"owner": "Data Platform Team"}},
+    {"op": "set_item", "item_id": "dl-1", "fields": {"owner": "Marcus Oyelaran"}},
+    {"op": "set_item", "item_id": "dl-2", "fields": {"due_date": "2026-12-01"}},
+    {"op": "set_item", "item_id": "risk-1", "fields": {"state": "completed", "evidence": "Access request REQ-1182 approved"}},
+    {"op": "set_item", "item_id": "con-1", "fields": {"escalation": true}},
+    {"op": "set_item", "item_id": "acc-1", "fields": {"detail": "Request the Analyst role through the IT Service Desk portal; the Finance Team Lead approves."}}
+  ]
+}
